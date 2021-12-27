@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Library.Repositories
 {
-    internal class Program
+    internal class VartaiRepository
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }

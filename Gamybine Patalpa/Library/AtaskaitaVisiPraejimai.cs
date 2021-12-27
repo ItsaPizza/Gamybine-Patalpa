@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Library
 {
-    internal class Program
+    internal class AtaskaitaVisiPraejimai
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
