@@ -9,14 +9,14 @@ namespace Library
     public class Vartai
     {
         public string Pavadinimas { get; set; }
-        public int Numeris { get; set; }
+        public int Id { get; set; }
         
 
         public Vartai() { }
-        public Vartai(string pavadinimas, int numeris)
+        public Vartai(string pavadinimas, int id)
         {
             Pavadinimas = pavadinimas;
-            Numeris = numeris;
+            Id = id;
         }
 
     }

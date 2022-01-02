@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    internal class PraejimaiReportItem
+    public class ReportItemPraejimai
     {
+        public string Vardas { get; set; }
+        public string Pavarde { get; set; }
+        public string VartuPavadinimas { get; set; }
+        public int PraejimuSkaicius { get; set; }
     }
 }

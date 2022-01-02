@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    internal class DarboValandosReportItem
+    public class ReportItemDarboValandos
     {
+        public string Vardas { get; set; }
+        public string Pavarde { get; set; }
+        public TimeSpan DarboLaikas { get; set; }
     }
 }

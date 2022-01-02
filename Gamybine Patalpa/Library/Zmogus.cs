@@ -10,18 +10,20 @@ namespace Library
     {
         public string Vardas { get; set; }
         public string Pavarde { get; set; }
-        public int VartuNumeris { get; set; }
-        public int PraejimuSkaicius { get; set; }
-        public DateTime DarboLaikas { get; set; }
+        public int VartuId { get; set; }
+        public int PietuSkaicius { get; set; }
+        public int ParukymoSkaicius { get; set; }
+        public int TualetoSkaicius { get; set; }
 
         public Zmogus() { }
-        public Zmogus(string vardas, string pavarde, int varduNumeris, int praejimuSkaicius, DateTime darboLaikas)
+        public Zmogus(string vardas, string pavarde, int vartuId, int pietuSkaicius, int parukymoSkaicius, int tualetoSkaicius)
         {
             Vardas = vardas;
             Pavarde = pavarde;
-            VartuNumeris = varduNumeris;
-            PraejimuSkaicius = praejimuSkaicius;
-            DarboLaikas = darboLaikas;
+            VartuId = vartuId;
+            PietuSkaicius = pietuSkaicius;
+            ParukymoSkaicius = parukymoSkaicius;
+            TualetoSkaicius = tualetoSkaicius;
         }
     }
 }
