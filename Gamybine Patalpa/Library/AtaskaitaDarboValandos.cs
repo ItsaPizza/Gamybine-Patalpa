@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    internal class AtaskaitaDarboValandos
+    public class AtaskaitaDarboValandos
     {
     }
 }

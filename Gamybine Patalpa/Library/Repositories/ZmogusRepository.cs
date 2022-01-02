@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library.Repositories
 {
-    internal class ZmogusRepository
+    public class ZmogusRepository
     {
     }
 }

@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    internal class Vartai
+    public class Vartai
     {
+        public string Pavadinimas { get; set; }
+        public int Numeris { get; set; }
+        
+
+        public Vartai() { }
+        public Vartai(string pavadinimas, int numeris)
+        {
+            Pavadinimas = pavadinimas;
+            Numeris = numeris;
+        }
+
     }
 }
