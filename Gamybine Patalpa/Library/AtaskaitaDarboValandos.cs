@@ -43,14 +43,6 @@ namespace Library
             }
 
             return darboValanduSarasas;
-        }
-        //private TimeSpan GautiIvykioLaika(string ivykis)
-        //{
-        //    Ivykis gautasIvykis = _ivykisRepository.GautiIvyki(ivykis);
-            
-        //    return gautasIvykis.Trukme;
-        //}
-        
-        
+        }        
     }
 }

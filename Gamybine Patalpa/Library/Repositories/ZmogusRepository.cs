@@ -24,28 +24,11 @@ namespace Library.Repositories
             zmones.Add(new Zmogus(10, "Denerys", "Targarian", 1));
         }
 
-        private int GautiPietuSkaiciu()
-        {
-            var random = new Random();
-            int pietuSkaicius = random.Next(0, 3);
-            
-            return pietuSkaicius;
-        }
-        private int GautiParukymoSkaiciu()
-        {
-            var random = new Random();
-            int parukymoSkaicius = random.Next(0, 5);
-
-            return parukymoSkaicius;
-        }
-        private int GautiTualetoSkaiciu()
-        {
-            var random = new Random();
-            int tualetoSkaicius = random.Next(1, 6);
-
-            return tualetoSkaicius;
-        }
         public List<Zmogus> GautiZmones() => zmones;
+        public Zmogus GautiZmogu(int id)
+        {
+            return zmones[id];
+        }
 
     }
 }

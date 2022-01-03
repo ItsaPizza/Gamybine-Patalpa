@@ -44,6 +44,7 @@ namespace Library
 
                 praejimuSarasas.Add(reportItemPraejimai);
             }
+            praejimuSarasas = praejimuSarasas.OrderBy(x => x.Vardas).ToList();
             return praejimuSarasas;
         }
     }
