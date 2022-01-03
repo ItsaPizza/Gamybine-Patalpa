@@ -12,16 +12,16 @@ namespace Library.Repositories
         private List<Zmogus> zmones = new List<Zmogus>();
         public ZmogusRepository()
         {
-            zmones.Add(new Zmogus("John", "Snow", 1, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Tirion", "Lanister", 2, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Tywin", "Lanister", 2, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Jamie", "Lanister", 2, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Ned", "Stark", 3, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Aria", "Stark", 3, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Sansa", "Stark", 3, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Robert", "Barathian", 4, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Stanis", "Barathian", 4, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
-            zmones.Add(new Zmogus("Denerys", "Targarian", 1, GautiPietuSkaiciu(), GautiParukymoSkaiciu(), GautiTualetoSkaiciu()));
+            zmones.Add(new Zmogus(1, "John", "Snow", 1));
+            zmones.Add(new Zmogus(2, "Tirion", "Lanister", 2));
+            zmones.Add(new Zmogus(3, "Tywin", "Lanister", 2));
+            zmones.Add(new Zmogus(4, "Jamie", "Lanister", 2));
+            zmones.Add(new Zmogus(5, "Ned", "Stark", 3));
+            zmones.Add(new Zmogus(6, "Aria", "Stark", 3));
+            zmones.Add(new Zmogus(7, "Sansa", "Stark", 3));
+            zmones.Add(new Zmogus(8, "Robert", "Barathian", 4));
+            zmones.Add(new Zmogus(9, "Stanis", "Barathian", 4));
+            zmones.Add(new Zmogus(10, "Denerys", "Targarian", 1));
         }
 
         private int GautiPietuSkaiciu()

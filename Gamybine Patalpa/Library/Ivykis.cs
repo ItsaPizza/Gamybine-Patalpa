@@ -8,12 +8,16 @@ namespace Library
 {
     public class Ivykis
     {
+        public int Id { get; set; }
         public string Pavadinimas { get; set; }
+        public int ZmogausId { get; set; }
         public TimeSpan Trukme { get; set; }
         public Ivykis() { }
-        public Ivykis(string pavadinimas, TimeSpan trukme)
+        public Ivykis(int id, string pavadinimas, int zmogausId, TimeSpan trukme)
         {
+            Id = id;
             Pavadinimas = pavadinimas;
+            ZmogausId = zmogausId;
             Trukme = trukme;
         }
 

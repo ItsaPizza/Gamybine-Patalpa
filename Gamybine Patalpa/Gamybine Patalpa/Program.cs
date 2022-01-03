@@ -15,7 +15,7 @@ namespace ConsoleApp2
             var ivykisRepository = new IvykisRepository();
             var vartaiRepository = new VartaiRepository();
             var zmogusRepository = new ZmogusRepository();
-            var ataskaitaVisiPraejimai = new AtaskaitaVisiPraejimai(vartaiRepository, zmogusRepository);
+            var ataskaitaVisiPraejimai = new AtaskaitaVisiPraejimai(ivykisRepository, vartaiRepository, zmogusRepository);
             var ataskaitaDarboValandos = new AtaskaitaDarboValandos(ivykisRepository, zmogusRepository);
             List<ReportItemPraejimai> visuPraejimai = ataskaitaVisiPraejimai.GautiVisuPraejimus();
             List<ReportItemDarboValandos> visuDarboValandos = ataskaitaDarboValandos.GautiVisuDarboValandas();

@@ -9,11 +9,13 @@ namespace Library
 {
     public class AtaskaitaVisiPraejimai
     {
+        private IvykisRepository _ivykisRepository;
         private VartaiRepository _vartaiRepository;
         private ZmogusRepository _zmogusRepository;
 
-        public AtaskaitaVisiPraejimai(VartaiRepository vartaiRepository, ZmogusRepository zmogusRepository)
+        public AtaskaitaVisiPraejimai(IvykisRepository ivykisRepository,VartaiRepository vartaiRepository, ZmogusRepository zmogusRepository)
         {
+            _ivykisRepository = ivykisRepository;
             _vartaiRepository = vartaiRepository;
             _zmogusRepository = zmogusRepository;
         }
@@ -22,17 +24,24 @@ namespace Library
         {
             List<ReportItemPraejimai> praejimuSarasas = new List<ReportItemPraejimai>();
             List<Zmogus> zmones = _zmogusRepository.GautiZmones();
-            
+            List<Ivykis> ivykiai = _ivykisRepository.GautiIvykius();
 
             foreach(var zmogus in zmones)
             {
                 var reportItemPraejimai = new ReportItemPraejimai();
-                int pertraukuSkaicius = zmogus.PietuSkaicius + zmogus.ParukymoSkaicius + zmogus.TualetoSkaicius;
-                reportItemPraejimai.PraejimuSkaicius = 2 + (pertraukuSkaicius * 2);
+                reportItemPraejimai.PraejimuSkaicius = 2;
                 reportItemPraejimai.Vardas = zmogus.Vardas;
                 reportItemPraejimai.Pavarde = zmogus.Pavarde;
-                Vartai vartai = _vartaiRepository.GautiVienusVartus(zmogus.VartuId);                
+                Vartai vartai = _vartaiRepository.GautiVienusVartus(zmogus.VartuId);
                 reportItemPraejimai.VartuPavadinimas = vartai.Pavadinimas;
+                foreach (var ivykis in ivykiai)
+                {
+                    if (ivykis.ZmogausId == zmogus.Id)
+                    {
+                        reportItemPraejimai.PraejimuSkaicius += 2;
+                    }
+                }
+
                 praejimuSarasas.Add(reportItemPraejimai);
             }
             return praejimuSarasas;

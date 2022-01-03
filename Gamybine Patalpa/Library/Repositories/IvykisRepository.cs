@@ -9,11 +9,14 @@ namespace Library.Repositories
     public class IvykisRepository
     {
         private List<Ivykis> ivykiai = new List<Ivykis>();
+
         public IvykisRepository()
-        {                       
-            ivykiai.Add(new Ivykis("Pietauti", new TimeSpan(01, 00, 00)));
-            ivykiai.Add(new Ivykis("Parukyti", new TimeSpan(00, 15, 00)));
-            ivykiai.Add(new Ivykis("Tualetas", new TimeSpan(00, 10, 00)));
+        {
+            GeneruotiIvykius(50);
+            foreach (var ivykis in ivykiai)
+            {
+                Console.WriteLine($"Ivykis {ivykis.Id}: Zmogaus ID: {ivykis.ZmogausId}, Veiksmas: {ivykis.Pavadinimas}");
+            }
         }
 
         public List<Ivykis> GautiIvykius() => ivykiai;
@@ -23,5 +26,50 @@ namespace Library.Repositories
 
             return gautasIvykis;
         }
+        private TimeSpan GautiLaika(string ivykis)
+        {
+            switch (ivykis)
+            {
+                case "Pietauti":
+                    return new TimeSpan(01, 00, 00);
+                case "Parukyti":
+                    return new TimeSpan(00, 15, 00);
+                case "Tualetas":
+                    return new TimeSpan(00, 10, 00);
+                default: throw new ArgumentException(nameof(ivykis));
+            }
+        }
+        private void GeneruotiIvykius(int skaicius)
+        {
+            
+            for (int i = 0; i < skaicius; i++)
+            {
+                var ivykis = new Ivykis();
+                ivykis.Id = i + 1;
+                var random = new Random();
+                var veiksmas = random.Next(1, 4);
+                switch (veiksmas)
+                {
+                    case 1:
+                        ivykis.Pavadinimas = "Pietauti";
+                        break;
+                    case 2:
+                        ivykis.Pavadinimas = "Parukyti";
+                        break;
+                    case 3:
+                        ivykis.Pavadinimas = "Tualetas";
+                        break;
+                    default:
+                        break;
+                }
+                ivykis.ZmogausId = random.Next(1, 11);
+                ivykis.Trukme = GautiLaika(ivykis.Pavadinimas);
+                ivykiai.Add(ivykis);
+            }
+        }
+            
+
+           
+        
     }
 }
